@@ -1,5 +1,3 @@
-# Rankify Frontend
-
 A modern frontend application built with **React** and **Vite**.
 
 ## Table of Contents
