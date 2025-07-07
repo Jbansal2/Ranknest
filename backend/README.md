@@ -40,20 +40,6 @@ A backend and dashboard for managing student results, statistics, and email noti
 5. **Access the dashboard**
    - Open `backend/public/dashboard.html` in your browser.
 
-## API Endpoints
-
-- `GET /api/auth/user` - Get current user info
-- `GET /api/auth/students` - List all students
-- `GET /api/auth/students/count` - Get student count by branch
-- `GET /api/auth/students/search` - Search students by name or enrollment
-- `GET /api/auth/students/branch` - Filter students by branch
-- `GET /api/auth/students/enroll_no` - Get student by enrollment number
-- `POST /api/auth/email/send-result` - Email result to a student
-- `POST /api/auth/email/send-subscribed` - Email all subscribers
-- `GET /api/auth/subscribe` - List subscribers
-- `POST /api/auth/subscribe` - Add a subscriber
-- `DELETE /api/auth/subscribe/delete/:id` - Remove a subscriber
-
 ## License
 
 MIT
