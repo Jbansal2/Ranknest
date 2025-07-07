@@ -1,23 +1,18 @@
 const Subscribe = require('../models/Query');
 const mailSender = require('../utils/email');
 
-// POST - Handle user query submission
+// POST
 exports.Query = async (req, res) => {
   const { email, name, message } = req.body;
 
   try {
-    // Validate all fields
     if (!email || !name || !message) {
       return res.status(400).json({
         success: false,
         message: "All fields (name, email, message) are required",
       });
     }
-
-    // Save query to database
     const saveEmail = await Subscribe.create({ name, email, message });
-
-    // Send confirmation email
     await mailSender(
       email,
       "Query Confirmation - Ranknest",
@@ -26,8 +21,6 @@ exports.Query = async (req, res) => {
         message,
       }
     );
-
-    // Success response
     return res.status(200).json({
       success: true,
       message: "Query submitted and email sent successfully",
@@ -44,7 +37,7 @@ exports.Query = async (req, res) => {
   }
 };
 
-// GET - Fetch all submitted queries
+// GET 
 exports.getAllQueries = async (req, res) => {
   try {
     const getAllSubscribe = await Subscribe.find().sort({ createdAt: -1 });
