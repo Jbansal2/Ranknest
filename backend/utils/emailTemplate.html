@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Confirmation - StudyX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:white ;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .email-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background:black;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .logo {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .greeting {
+            font-size: 1.8rem;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .main-text {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 5px solid black;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .message-box::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 3rem;
+            color: black;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .message-text {
+            font-size: 1rem;
+            color: #374151;
+            font-style: italic;
+            line-height: 1.7;
+            margin-left: 20px;
+        }
+
+        .response-info {
+            background: #ecfdf5;
+            border: 1px solid #d1fae5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .check-icon::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .response-text {
+            color: #065f46;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: black;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+        }
+
+        .social-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            width: 40px;
+            height: 40px;
+            background: #f3f4f6;
+            border-radius: 50%;
+            text-decoration: none;
+            line-height: 40px;
+            color: #6b7280;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: black;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-content {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: black;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .logo h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .greeting {
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, transparent 0%, transparent 40%, #fbbf24 40%, #fbbf24 60%, transparent 60%);
+            padding: 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-wrapper">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">
+                <h1>Ranknest</h1>
+                <p>Your Smart Ranklist Portel</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2 class="greeting">Hello <span class="highlight">{{name}}</span>,</h2>
+
+            <p class="main-text">
+                Thank you for reaching out to <strong>Ranknest</strong>!
+            </p>
+
+            <div class="message-box">
+                <div class="message-text">
+                    {{message}}
+                </div>
+            </div>
+
+            <div class="response-info">
+                <div class="check-icon"></div>
+                <div class="response-text">
+                    Your query has been received and our team will respond within 24 hours!
+                </div>
+            </div>
+            <div class="cta-section">
+                <a href="#" class="cta-button">Explore Ranknest </a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="copyright">
+                <p>&copy; {{year}} Ranknest. All rights reserved. | Made with ❤️ for Students</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
