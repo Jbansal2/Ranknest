@@ -1,0 +1,40 @@
+{
+  "programLabels": {
+    "BTECH": "Bachelor of Technology",
+    "BBA": "Bachelor of Business Administration",
+    "BCA": "Bachelor of Computer Applications",
+    "BCOM": "Bachelor of Commerce"
+
+  },
+  "programBranchMap": {
+    "BTECH": ["CSE", "AIML", "AIDS", "CST"],
+    "BBA": ["BBA"],
+    "BCA": ["BCA"],
+    "BCOM": ["BCOM"]
+
+  },
+  "programBatchMap": {
+    "BTECH": ["2022-2026", "2023-2027", "2024-2028"],
+    "BBA": ["2022-2025", "2023-2026", "2024-2027"],
+    "BCA": ["2022-2025", "2023-2026", "2024-2027"],
+    "BCOM": ["2022-2025", "2023-2026", "2024-2027"]
+
+  },
+  "semesterMap": {
+    "BTECH": ["OVERALL", "SEM 1", "SEM 2", "SEM 3", "SEM 4", "SEM 5", "SEM 6", "SEM 7", "SEM 8"],
+    "BBA": ["OVERALL", "SEM 1", "SEM 2", "SEM 3", "SEM 4", "SEM 5", "SEM 6"],
+    "BCA": ["OVERALL", "SEM 1", "SEM 2", "SEM 3", "SEM 4", "SEM 5", "SEM 6"],
+    "BCOM": ["OVERALL", "SEM 1", "SEM 2", "SEM 3", "SEM 4", "SEM 5", "SEM 6"]
+
+  },
+  "branchLabels": {
+    "CSE": "Computer Science Engineering",
+    "AIML": "AI & Machine Learning",
+    "AIDS": "AI & Data Science",
+    "CST": "Computer Science Technology",
+    "BBA": "BBA",
+    "BCA": "Bachelor of Computer Applications",
+    "BCOM": "Bachelor of Commerce"
+
+  }
+}
