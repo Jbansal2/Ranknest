@@ -108,6 +108,15 @@ For questions, feedback, or collaboration inquiries, please reach out through th
 
 - **Portfolio**: Connect via [portfolio](https://jitendrabansal.vercel.app/) for inquiries.
 
+- ## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+This project is licensed under the [MIT License](LICENSE) © 2025 Jitendra Bansal.
+
+
+- 
+
 
 
 
