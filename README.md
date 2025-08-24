@@ -63,41 +63,7 @@ We welcome contributions in the following areas:
 To ensure a positive and collaborative environment, please adhere to the following guidelines:
 
 - **Be Respectful and Inclusive**: Treat all contributors and community members with respect and foster an inclusive environment in all interactions.
-- **Follow Coding Standards**: Adhere to the project's established coding standards and conventions.
-- **Write Clear Commit Messages**: Use descriptive and concise commit messages to clearly communicate changes.
-- **Test Thoroughly**: Ensure your code is thoroughly tested before submitting to maintain project quality.
-- **Provide Detailed Pull Requests**: Include clear and detailed descriptions in your pull requests to explain the purpose and impact of your changes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **Follow Coding Sta
 
 ## Contact
 
@@ -113,9 +79,4 @@ For questions, feedback, or collaboration inquiries, please reach out through th
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This project is licensed under the [MIT License](LICENSE) © 2025 Jitendra Bansal.
-
-
-
-
-
 
