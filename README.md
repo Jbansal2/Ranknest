@@ -63,7 +63,7 @@ We welcome contributions in the following areas:
 To ensure a positive and collaborative environment, please adhere to the following guidelines:
 
 - **Be Respectful and Inclusive**: Treat all contributors and community members with respect and foster an inclusive environment in all interactions.
-- **Follow Coding Sta
+- **Follow Coding Standards**:Adhere to the established coding practices and style guidelines to ensure clarity, consistency, and maintainability of the codebase.
 
 ## Contact
 
